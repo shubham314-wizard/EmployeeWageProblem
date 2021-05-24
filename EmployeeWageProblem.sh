@@ -5,11 +5,20 @@
 
 echo  "welcome to shell script of empwage"
 
-isEmployeePresent=$((RANDOM%2))
+#variable
+empCheck=$(( RANDOM%2 ))
 
-if [ $isEmployeePresent -eq 1 ]
+# constants
+IS_PRESENT=1
+EMP_RATE_PER_HR=20
+
+# selection
+
+if [ $empCheck -eq $IS_PRESENT ]
 then
- 	echo "Employee is present"
+        empHrs=8
+        salary=$(( EMP_RATE_PER_HR * empHrs )) #action
 else
-	echo "Employee is present"
+        salary=0  # action2
 fi
+
