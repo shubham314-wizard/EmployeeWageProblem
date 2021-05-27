@@ -16,7 +16,7 @@ EMP_RATE_PER_HR=20
 
 if [ $empCheck -eq $IS_PRESENT ]
 then
-        empHrs=8
+        empHrs=10
         salary=$(( EMP_RATE_PER_HR * empHrs )) #action
 else
         salary=0  # action2
